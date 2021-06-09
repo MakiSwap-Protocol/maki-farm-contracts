@@ -1,0 +1,49 @@
+{
+  "name": "maki-farm-contracts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "migrate": "truffle migrate --reset",
+    "migrate:hecotest": "truffle migrate --reset --network hecotest",
+    "compile": "truffle compile",
+    "compile:hecotest": "truffle compile --network hecotest",
+
+    "flat:bar": "truffle-flattener contracts/SoyBar.sol > flats/SoyBar_flat.sol",
+    "flat:maki": "truffle-flattener contracts/MakiToken.sol > flats/MakiToken_flat.sol",
+    "flat:master": "truffle-flattener contracts/MasterChef.sol > flats/MasterChef_flat.sol",
+    "flat:sous": "truffle-flattener contracts/SousChef.sol > flats/SousChef_flat.sol",
+
+    "verify:maki": "truffle run verify MakiToken --network hecotest --license SPDX-License-Identifier",
+    "verify:soy": "truffle run verify SoyBar --network hecotest --license SPDX-License-Identifier",
+    "verify:master": "truffle run verify MasterChef --network hecotest --license SPDX-License-Identifier",
+    "verify:sous": "truffle run verify SousChef --network hecotest --license SPDX-License-Identifier",
+
+    "test": "npx buidler test",
+    "coverage": "npx buidler coverage"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.0.0",
+    "@openzeppelin/test-helpers": "^0.5.10",
+    "@truffle/hdwallet-provider": "^1.2.6",
+    "maki-swap-lib": "^2.1.0",
+    "maki-swap-periphery": "^3.3.0",
+    "makiswap-core": "^4.1.0",
+    "truffle": "^5.1.58",
+    "truffle-flattener": "^1.4.4",
+    "truffle-hdwallet-provider-privkey": "^0.3.0"
+  },
+  "devDependencies": {
+    "@nomiclabs/buidler": "^1.4.8",
+    "@nomiclabs/buidler-ethers": "^2.0.2",
+    "@nomiclabs/buidler-truffle5": "^1.3.4",
+    "@nomiclabs/buidler-waffle": "^2.1.0",
+    "@nomiclabs/buidler-web3": "^1.3.4",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.3.0",
+    "ethers": "^5.0.32",
+    "solidity-coverage": "^0.7.16",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "truffle-plugin-verify": "^0.5.7",
+    "web3": "^1.3.4"
+  }
+}
