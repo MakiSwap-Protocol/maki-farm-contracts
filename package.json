@@ -12,11 +12,15 @@
     "flat:maki": "truffle-flattener contracts/MakiToken.sol > flats/MakiToken_flat.sol",
     "flat:master": "truffle-flattener contracts/MasterChef.sol > flats/MasterChef_flat.sol",
     "flat:sous": "truffle-flattener contracts/SousChef.sol > flats/SousChef_flat.sol",
+    "flat:vault": "truffle-flattener contracts/MakiVault.sol > flats/MakiVault_flat.sol",
+    "flat:owner": "truffle-flattener contracts/VaultOwner.sol > flats/VaultOwner_flat.sol",
 
     "verify:maki": "truffle run verify MakiToken --network hecotest --license SPDX-License-Identifier",
     "verify:soy": "truffle run verify SoyBar --network hecotest --license SPDX-License-Identifier",
     "verify:master": "truffle run verify MasterChef --network hecotest --license SPDX-License-Identifier",
     "verify:sous": "truffle run verify SousChef --network hecotest --license SPDX-License-Identifier",
+    "verify:vault": "truffle run verify MakiVault --network hecotest --license SPDX-License-Identifier",
+    "verify:owner": "truffle run verify VaultOwner --network hecotest --license SPDX-License-Identifier",
 
     "test": "npx buidler test",
     "coverage": "npx buidler coverage"
